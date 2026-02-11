@@ -1,8 +1,8 @@
 /**************************************************************************
- Program:    Paper 39.sas
+ Program:    ICB-SGA-Designation.sas
  Author:     Oliver Hugh
  Organisation: Perinatal Institute
- Contact:    ohugh@perinatal.org.uk
+ Contact:    data@perinatal.org.uk
  Created:    07-Oct-2025
  Updated:    07-Oct-2025
  SAS Version: 9.4
@@ -10,7 +10,7 @@
 
  Description:
    This program is used to produce the tables and figures referenced in  "Designation of small-for-gestational age according to 7 fetal growth charts in 
-England’s National Health Service: retrospective analysis of 3.2 million births" by Gardosi et al, 2026. 
+Englandâ€™s National Health Service: population based cohort study of 3.2 million births" by Gardosi et al, 2026. 
 
 
  Inputs:
@@ -20,7 +20,7 @@ England’s National Health Service: retrospective analysis of 3.2 million births"
 	- OTHER FIGURES AND TABLES.xlsx
 
  License:
-   © 2026 Perinatal Institute. All rights reserved.
+   Â© 2026 Perinatal Institute. All rights reserved.
    This program is provided for research and educational use only.
    Redistribution or modification requires prior written permission.
 
@@ -208,7 +208,7 @@ if bwt2>IGfetp97bwt then LGAIGFet97=1 ; else LGAIGFet97=0;
   end;
   else do;
     /* Piecewise linear interpolation on ln-scale */
-    if lnbw <= lnP03 then do;               /* extrapolate below 3rd using 3–10 slope */
+    if lnbw <= lnP03 then do;               /* extrapolate below 3rd using 3â€“10 slope */
       igcent = 3 + (lnbw - lnP03) * (7 / (lnP10 - lnP03));
       band = '<3';
     end;
@@ -228,7 +228,7 @@ if bwt2>IGfetp97bwt then LGAIGFet97=1 ; else LGAIGFet97=0;
       igcent = 90 + 7  * (lnbw - lnP90) / (lnP97 - lnP90);
       band = '90-97';
     end;
-    else do;                                /* extrapolate above 97th using 90–97 slope */
+    else do;                                /* extrapolate above 97th using 90â€“97 slope */
       igcent = 97 + (lnbw - lnP97) * (3 / (lnP97 - lnP90));
       band = '>97';
     end;
@@ -561,3 +561,4 @@ proc reg data=raw;
    model grow_lite = wei / clb  ;
 run;
 quit;
+
