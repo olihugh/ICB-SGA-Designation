@@ -1,0 +1,26 @@
+NOTE: Jenner v1.5.30 (build v1.5.30+unknown.20260714T020019Z.x86_64-unknown-linux-gnu)
+
+NOTE: Option OBS changed to 100.
+NOTE: DATA inital_db
+
+NOTE: Processing inline DATALINES (15 lines)
+
+NOTE: Read 15 rows from DATALINES.
+NOTE: Wrote inital_db (15 rows, 10 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA step1
+
+
+NOTE: Read 15 rows from inital_db.
+NOTE: Wrote step1 (13 rows, 118 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC PRINT data=step1
+
+NOTE: PROC PRINT completed: 13 observations printed, 9 variables
+NOTE: PROC TABULATE
+NOTE: PROC MEANS
+NOTE: PROC MEANS statement used.

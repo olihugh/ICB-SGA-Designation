@@ -1,0 +1,7 @@
+{
+  "bundle": "t001_sga_centiles",
+  "source_file": "ICB SGA Designation Paper Script.sas",
+  "source_blob_sha": "45bf433ef82fbcc779de65725e81d7006f12c20c",
+  "source_commit": "c0fd94c646663c2650e008f5455dadd6c4941a3e",
+  "notes": "The paper's step1 DATA step verbatim (FMF, Hadlock, WHO, IG21-2017, IG21-2020 centile formulas and the SGA/LGA designations), plus the descriptive coding block. Data source db.inital_db (proprietary 3.2M-birth extract) is replaced with a 15-row synthetic cohort carrying the columns the step reads (gest, birthweight, bmi, parity, eth, ccb, sndb, icb, maternalheight, maternalweight). ODS Excel writes to P:\\ paths are replaced with PROC PRINT / PROC TABULATE / PROC MEANS summaries so the program runs stand-alone. Growth-chart formulas unchanged."
+}
